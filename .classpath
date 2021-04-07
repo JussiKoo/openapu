@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/devel/jar/fxgui.jar"/>
+	<classpathentry kind="lib" path="C:/devel/jar/Graphics.jar"/>
+	<classpathentry kind="lib" path="C:/devel/jar/Music.jar"/>
+	<classpathentry kind="lib" path="C:/devel/jar/Ali.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
