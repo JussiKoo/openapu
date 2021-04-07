@@ -17,7 +17,7 @@ import openapu.Oppilas;
 import openapu.SailoException;
 
 /**
- * Käsittelijä oppilaiden hallinnoimiseen kurssin sisäisesti. Ei vielä otettu käyttöön.
+ * Kï¿½sittelijï¿½ oppilaiden hallinnoimiseen kurssin sisï¿½isesti. Ei vielï¿½ otettu kï¿½yttï¿½ï¿½n.
  * @author Jussi Kauppinen jussi.m.o.kauppinen@student.jyu.fi
  * @author Akseli Rauhansalo a.rauhansalo@gmail.com
  * @version 20.4.2018
@@ -40,7 +40,7 @@ public class KurssinOppilaatGUIController implements ModalControllerInterface<Op
 
     
 	/**
-     * Käsittelee oppilaan siirtämisen kurssille.    
+     * Kï¿½sittelee oppilaan siirtï¿½misen kurssille.    
      */
     @FXML private void handleLisaaKurssille(){
         lisaaKurssille();
@@ -56,21 +56,21 @@ public class KurssinOppilaatGUIController implements ModalControllerInterface<Op
 
     
     /**
-     * Käsittelee uuden oppilaan lisäämisen tietokantaan.
+     * Kï¿½sittelee uuden oppilaan lisï¿½ï¿½misen tietokantaan.
      */
     @FXML private void handleUusiOppilas() {
         ModalController.showModal(OpenapuGUIController.class.getResource("UusiOppilasGUIView.fxml"), "Oppilas", null, "");
     }
     
     /**
-     * Käsittelee tietojen tallentamisen varmistuksen.
+     * Kï¿½sittelee tietojen tallentamisen varmistuksen.
      */
     @FXML private void handleOK() {
         ModalController.closeStage(chooserKaikkioppilaat);
     }
     
     /**
-     * Käsittelee muutosten peruuttamisen.
+     * Kï¿½sittelee muutosten peruuttamisen.
      */
     @FXML private void handlePeruuta() {
         openapu = null;
@@ -78,7 +78,7 @@ public class KurssinOppilaatGUIController implements ModalControllerInterface<Op
     }
 
     
-    // ========================== Tästä eteenpäin ei FXML -koodia ================================
+    // ========================== Tï¿½stï¿½ eteenpï¿½in ei FXML -koodia ================================
    
     private void alusta(Kurssi kurssi) {
     	kurssiKohdalla = kurssi;
@@ -91,7 +91,7 @@ public class KurssinOppilaatGUIController implements ModalControllerInterface<Op
 
     /**
      * Hakee kaikki oppilaat omaan listaan.
-     * @param onro joka aktivoidaan haun jälkeen
+     * @param onro joka aktivoidaan haun jï¿½lkeen
      */
     private void haeKaikki(int onro){
     	chooserKaikkioppilaat.clear();
@@ -117,7 +117,7 @@ public class KurssinOppilaatGUIController implements ModalControllerInterface<Op
     
     /**
      * Hakee kurssin oppilaat listaan.
-     * @param onro joka aktivoidaan haun jälkeen
+     * @param onro joka aktivoidaan haun jï¿½lkeen
      */
     private void haeKurssin(int onro){
     	chooserKurssinoppilaat.clear();
@@ -138,15 +138,16 @@ public class KurssinOppilaatGUIController implements ModalControllerInterface<Op
     
     
     /**
-     * Lisää valitun oppilaan kurssille.
+     * Lisï¿½ï¿½ valitun oppilaan kurssille.
      */
     private void lisaaKurssille() {
-    	try {
-			openapu.liitaKurssille(kurssiKohdalla, oppilasKaikista);
+		if (oppilasKaikista == null) return;	
+        try {
+                openapu.liitaKurssille(kurssiKohdalla, oppilasKaikista);
+            } catch (SailoException e) {
+                Dialogs.showMessageDialog("Oppilasta ei voitu lisÃ¤tÃ¤:" + e.getMessage());
+            }
 			haeKurssin(oppilasKaikista.getID());
-		} catch (SailoException e) {
-			//
-		}
 	}
     
     
@@ -160,17 +161,17 @@ public class KurssinOppilaatGUIController implements ModalControllerInterface<Op
     
     
     /**
-     * Näyttää ikkunan kurssin oppilastiedoista 
-     * @param modalStage null, mikäli pääikkuna
-     * @param oletus openapu-olio, jonka oppilaita käytetään
-     * @param kurssi jonka oppilaat näytetään
+     * Nï¿½yttï¿½ï¿½ ikkunan kurssin oppilastiedoista 
+     * @param modalStage null, mikï¿½li pï¿½ï¿½ikkuna
+     * @param oletus openapu-olio, jonka oppilaita kï¿½ytetï¿½ï¿½n
+     * @param kurssi jonka oppilaat nï¿½ytetï¿½ï¿½n
      * @return muokattu openapu-olio
      */
 	public static Openapu kysyTiedot(Stage modalStage, Openapu oletus, Kurssi kurssi) {
         return ModalController.<Openapu,KurssinOppilaatGUIController>showModal(
                 KurssinOppilaatGUIController.class.getResource("KurssinOppilaatGUIView.fxml"),
                 "Openapu",
-                modalStage, oletus, ctrl -> ctrl.alusta(kurssi) //Syöttää alustukselle kurssin, jonka tietoja käytetään.
+                modalStage, oletus, ctrl -> ctrl.alusta(kurssi) //Syï¿½ttï¿½ï¿½ alustukselle kurssin, jonka tietoja kï¿½ytetï¿½ï¿½n.
             );
 	}
 	

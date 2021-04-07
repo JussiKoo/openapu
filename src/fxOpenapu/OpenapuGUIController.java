@@ -26,7 +26,7 @@ import openapu.SailoException;
 
 
 /**
- * Tapahtumankäsittelijä käyttöliittymälle.
+ * Tapahtumankï¿½sittelijï¿½ kï¿½yttï¿½liittymï¿½lle.
  * @author Jussi Kauppinen jussi.m.o.kauppinen@student.jyu.fi
  * @author Akseli Rauhansalo a.rauhansalo@gmail.com
  * @version 20.4.2018
@@ -58,7 +58,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee uuden kurssin lisäämisen.
+     * Kï¿½sittelee uuden kurssin lisï¿½ï¿½misen.
      */
     @FXML private void handleUusiKurssi() {
         uusiKurssi();
@@ -66,7 +66,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee olemassaolevan kurssin muokkaamisen.
+     * Kï¿½sittelee olemassaolevan kurssin muokkaamisen.
      */
     @FXML private void handleMuokkaaKurssia() {
         muokkaaKurssia();
@@ -74,7 +74,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee olemassaolevan kurssin poistamisen tietokannasta.
+     * Kï¿½sittelee olemassaolevan kurssin poistamisen tietokannasta.
      */
     @FXML private void handlePoistaKurssi() {
         poistaKurssi();
@@ -82,7 +82,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Avaa dialogin, jossa kaikki oppilaat. Uuden lisääminen tapahtuu tämän dialogin kautta.
+     * Avaa dialogin, jossa kaikki oppilaat. Uuden lisï¿½ï¿½minen tapahtuu tï¿½mï¿½n dialogin kautta.
      */
     @FXML private void handleUusiOppilas() {   
         naytaOppilaat();
@@ -97,7 +97,7 @@ public class OpenapuGUIController implements Initializable {
     
 
     /**
-     * Käsittelee olemassaolevan oppilaan tietojen poistamisen. Todellisuudessa avaa dialogin jossa kaikki oppilaat, jonka kautta poistaminen tapahtuu.
+     * Kï¿½sittelee olemassaolevan oppilaan tietojen poistamisen. Todellisuudessa avaa dialogin jossa kaikki oppilaat, jonka kautta poistaminen tapahtuu.
      */
     @FXML private void handlePoistaOppilas() {
         naytaOppilaat();
@@ -105,7 +105,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee kurssin oppilaiden hallinnointinäkymän avaamisen.
+     * Kï¿½sittelee kurssin oppilaiden hallinnointinï¿½kymï¿½n avaamisen.
      */
     @FXML private void handleKurssinOppilaat() {
         kurssinOppilaat();
@@ -113,7 +113,7 @@ public class OpenapuGUIController implements Initializable {
         
 
 	/**
-     * Käsittelee oppilaan tietonäkymän avaamisen.
+     * Kï¿½sittelee oppilaan tietonï¿½kymï¿½n avaamisen.
      */
     @FXML private void handleOppilaanTiedot() {
         oppilaanTiedot();
@@ -121,7 +121,7 @@ public class OpenapuGUIController implements Initializable {
     
 
     /**
-     * Käsittelee dialogin, jossa näkyy kaikki oppilaat.
+     * Kï¿½sittelee dialogin, jossa nï¿½kyy kaikki oppilaat.
      */
     @FXML private void handleNaytaOppilaat(){
     	naytaOppilaat();
@@ -129,7 +129,7 @@ public class OpenapuGUIController implements Initializable {
     
 
 	/**
-     * Käsittelee muokattujen tietojen tallentamisen.
+     * Kï¿½sittelee muokattujen tietojen tallentamisen.
      */
     @FXML private void handleTallenna() {
         tallenna();
@@ -137,7 +137,7 @@ public class OpenapuGUIController implements Initializable {
     
 
     /**
-     * Käsittelee tiedoston avaamisen.
+     * Kï¿½sittelee tiedoston avaamisen.
      */
     @FXML private void handleAvaa() {
         avaa();
@@ -145,7 +145,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee avustuksen näyttämisen.
+     * Kï¿½sittelee avustuksen nï¿½yttï¿½misen.
      */
     @FXML private void handleApua() {
         avustus();
@@ -155,7 +155,7 @@ public class OpenapuGUIController implements Initializable {
     @FXML private void handleLopeta() {
         if ( !this.voikoSulkea() ) {
             boolean vastaus = Dialogs.showQuestionDialog("Sulkeminen",
-                       "Tietoja ei tallennettu. Tallennetaanko ennen sulkemista?", "Kyllä", "Ei");
+                       "Tietoja ei tallennettu. Tallennetaanko ennen sulkemista?", "Kyllï¿½", "Ei");
             if (vastaus) {this.tallenna();}
         }
         ModalController.closeStage(chooserKurssit);
@@ -163,13 +163,13 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee tietojen näyttämisen.
+     * Kï¿½sittelee tietojen nï¿½yttï¿½misen.
      */
     @FXML private void handleTietoja() {
         ModalController.showModal(OpenapuGUIController.class.getResource("AboutView.fxml"), "Openapu", null, "");
     }
     
-    /* ======== Tästä eteenpäin ei käyttöliittymään liittyvää koodia. */
+    /* ======== Tï¿½stï¿½ eteenpï¿½in ei kï¿½yttï¿½liittymï¿½ï¿½n liittyvï¿½ï¿½ koodia. */
     
     private Openapu openapu = new Openapu();
     private Kurssi kurssiKohdalla;
@@ -200,7 +200,7 @@ public class OpenapuGUIController implements Initializable {
      * @param kurssitTied kurssien tietojen tiedostn nimi
      * @param oppilaatTied oppilaiden tiedoston nimi
      * @param kkTied kurssikohtaisten tietojen tiedoston nimi
-     * @return null jos lukeminen onnistuu, muuten virhe tekstinä
+     * @return null jos lukeminen onnistuu, muuten virhe tekstinï¿½
      */
     protected String lueTiedosto(String kurssitTied, String oppilaatTied, String kkTied) {
     	kurssit = kurssitTied;
@@ -223,14 +223,14 @@ public class OpenapuGUIController implements Initializable {
     
     /**
      * Tallentaa muutetut tiedot.
-     * @return virhe, mikäli epäonnistuu
+     * @return virhe, mikï¿½li epï¿½onnistuu
      */
     protected String tallenna() {
     	try {
     		openapu.tallenna();
     		return null;
     	} catch (SailoException ex) {
-    		Dialogs.showMessageDialog("Tallentaminen epäonnistui: " + ex.getMessage());
+    		Dialogs.showMessageDialog("Tallentaminen epï¿½onnistui: " + ex.getMessage());
     		return ex.getMessage();
     	}
     }
@@ -263,7 +263,7 @@ public class OpenapuGUIController implements Initializable {
  
     
     /**
-     * Näyttää oppilaan kurssikohtaiset tiedot kentissä.
+     * Nï¿½yttï¿½ï¿½ oppilaan kurssikohtaiset tiedot kentissï¿½.
      */
     protected void naytaKurssikohtTiedot() {
     	kurssiKohdalla = chooserKurssit.getSelectedObject();
@@ -280,11 +280,11 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Avaa dialogin uuden kurssin tietojen syöttämistä varten.
+     * Avaa dialogin uuden kurssin tietojen syï¿½ttï¿½mistï¿½ varten.
      */
     protected void uusiKurssi() {
         Kurssi kurssi;
-        Kurssi oletus = new Kurssi(); // Tyhjillä tiedoilla.
+        Kurssi oletus = new Kurssi(); // Tyhjillï¿½ tiedoilla.
         kurssi = KurssiDialogGUIController.kysyKurssi(null, oletus.clone());
         if (kurssi == null) return;
         kurssi.rekisteroi();
@@ -294,7 +294,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee kurssin tietojen muokkaamisen ja tallentamisen.
+     * Kï¿½sittelee kurssin tietojen muokkaamisen ja tallentamisen.
      */
     public void muokkaaKurssia() {
     	if (kurssiKohdalla == null) return;
@@ -307,11 +307,11 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Käsittelee kurssin oppilaiden hallinnoimisdialogin.
+     * Kï¿½sittelee kurssin oppilaiden hallinnoimisdialogin.
      */
     private void kurssinOppilaat() {
-    	Openapu uusi;
-		uusi = KurssinOppilaatGUIController.kysyTiedot(null, openapu, kurssiKohdalla.clone());
+    	Openapu uusi = null;
+		if (kurssiKohdalla != null) uusi = KurssinOppilaatGUIController.kysyTiedot(null, openapu, kurssiKohdalla.clone());
         if (uusi == null) return;
         setOpenapu(uusi);
         naytaKurssi();
@@ -319,7 +319,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Näyttää tietorakenteen oppilaat.
+     * Nï¿½yttï¿½ï¿½ tietorakenteen oppilaat.
      */
     private void naytaOppilaat() {
     	Openapu uusi = OppilaatGUIController.kysyOppilaat(null, openapu);
@@ -330,9 +330,9 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Päivittää kurssien tiedot listaan. Valitsee listasta kurssin ID:n perusteella. Oletuksena valitaan ensimmäinen. Käyttää hakukenttää avukseen kurssien haussa.
+     * Pï¿½ivittï¿½ï¿½ kurssien tiedot listaan. Valitsee listasta kurssin ID:n perusteella. Oletuksena valitaan ensimmï¿½inen. Kï¿½yttï¿½ï¿½ hakukenttï¿½ï¿½ avukseen kurssien haussa.
      * @param knro kurssin numero, joka aktivoidaan
-     * @param hakuehto nimi jota etsitään
+     * @param hakuehto nimi jota etsitï¿½ï¿½n
      */
     protected void haeKurssit(int knro, String hakuehto) {
     	chooserKurssit.clear();
@@ -353,6 +353,7 @@ public class OpenapuGUIController implements Initializable {
     		Dialogs.showMessageDialog("Ongelma kursseja haettaessa: " + ex.getMessage());
     	}
         chooserKurssit.setSelectedIndex(index);
+        kurssiKohdalla = chooserKurssit.getSelectedObject();
     }
    
     
@@ -361,9 +362,10 @@ public class OpenapuGUIController implements Initializable {
      */
     protected void poistaKurssi() {
     	if (kurssiKohdalla == null) return;
-    	if (!Dialogs.showQuestionDialog("Vahvistus", "Haluatko varmasti poistaa kurssin " + kurssiKohdalla.getNimi() + "?", "Kyllä", "Ei"))
+    	if (!Dialogs.showQuestionDialog("Vahvistus", "Haluatko varmasti poistaa kurssin " + kurssiKohdalla.getNimi() + "?", "Kyllï¿½", "Ei"))
         return;
         openapu.poista(kurssiKohdalla);
+        kurssiKohdalla = null;
         int index = chooserKurssit.getSelectedIndex();
         chooserOppilaat.clear();
         haeKurssit(0, null);
@@ -373,8 +375,8 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Asettaa openapu olion jota käytetään tässä.
-     * @param openapu Openapu jota tässä käytetään.
+     * Asettaa openapu olion jota kï¿½ytetï¿½ï¿½n tï¿½ssï¿½.
+     * @param openapu Openapu jota tï¿½ssï¿½ kï¿½ytetï¿½ï¿½n.
      */
     public void setOpenapu(Openapu openapu) {
         this.openapu = openapu;
@@ -382,7 +384,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Lisää oppilaan käyttöliittymään. Toistaiseksi valmiit arvotut tiedot.
+     * Lisï¿½ï¿½ oppilaan kï¿½yttï¿½liittymï¿½ï¿½n. Toistaiseksi valmiit arvotut tiedot.
      */
     protected void lisaaOppilas() {
 
@@ -416,7 +418,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Näytetään ohjelman suunnitelma ja käyttöohjeet selaimessa.
+     * Nï¿½ytetï¿½ï¿½n ohjelman suunnitelma ja kï¿½yttï¿½ohjeet selaimessa.
      */
     private void avustus() {
         Desktop dt = Desktop.getDesktop();
@@ -432,7 +434,7 @@ public class OpenapuGUIController implements Initializable {
     
     
     /**
-     * Näytetään oppilaan kurssikohtaiset tiedot.
+     * Nï¿½ytetï¿½ï¿½n oppilaan kurssikohtaiset tiedot.
      */
     private void oppilaanTiedot(){
         KurssikohtTieto kktieto = null;
@@ -445,8 +447,8 @@ public class OpenapuGUIController implements Initializable {
 
     
     /**
-     * Tutkii, saako sulkea, eli että onko tallennettu.
-     * @return true mikäli tiedot tallennettu, false mikäli ei tallennettu
+     * Tutkii, saako sulkea, eli ettï¿½ onko tallennettu.
+     * @return true mikï¿½li tiedot tallennettu, false mikï¿½li ei tallennettu
      */
     public boolean voikoSulkea() {
         return !openapu.onkoMuutettu();

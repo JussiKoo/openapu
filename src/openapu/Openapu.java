@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Openapu-luokka, joka huolehtii kursseista ja oppilaista. Pääosin kaikki metodit välittäjämetodeja.
+ * Openapu-luokka, joka huolehtii kursseista ja oppilaista. Pï¿½ï¿½osin kaikki metodit vï¿½littï¿½jï¿½metodeja.
  * @author Akseli Rauhansalo a.rauhansalo@gmail.com
  * @author Jussi Kauppinen jussi.m.o.kauppinen@student.jyu.fi
  * @version 20.4.2018
@@ -17,7 +17,7 @@ public class Openapu {
     
     
     /**
-     * Palauttaa kurssien lukumäärän
+     * Palauttaa kurssien lukumï¿½ï¿½rï¿½n
      * @return kurssien lkm
      */
     public int getKursseja() {
@@ -26,7 +26,7 @@ public class Openapu {
     
     
     /**
-     * Palauttaa oppilaiden lukumäärän.
+     * Palauttaa oppilaiden lukumï¿½ï¿½rï¿½n.
      * @return oppilaiden lkm
      */
     public int getOppilaita() {
@@ -35,9 +35,9 @@ public class Openapu {
     
     
     /**
-     * Lisää ohjelmaan uuden kurssin.
-     * @param kurssi lisättävä kurssi
-     * @throws SailoException jos lisäystä ei voida tehdä
+     * Lisï¿½ï¿½ ohjelmaan uuden kurssin.
+     * @param kurssi lisï¿½ttï¿½vï¿½ kurssi
+     * @throws SailoException jos lisï¿½ystï¿½ ei voida tehdï¿½
      * @example
      * <pre name="test">
      * #THROWS SailoException
@@ -50,7 +50,7 @@ public class Openapu {
      * openapu.lisaa(kem1); openapu.getKursseja() === 3;
      * openapu.getOppilaita() === 0;
      * openapu.annaKurssi(0) === null;
-     * openapu.annaKurssi(4) === kem1; //muita kursseja testeissä, 4 seuraava
+     * openapu.annaKurssi(4) === kem1; //muita kursseja testeissï¿½, 4 seuraava
      * openapu.annaKurssi(5) === kem2;
      * openapu.annaKurssi(2) === null;
      * openapu.lisaa(kem1);
@@ -64,9 +64,9 @@ public class Openapu {
     
     
     /**
-     * Lisää ophjelmaan uuden oppilaan.
-     * @param oppilas lisättävä oppilas
-     * @throws SailoException jos lisäiystä ei voida tehdä
+     * Lisï¿½ï¿½ ophjelmaan uuden oppilaan.
+     * @param oppilas lisï¿½ttï¿½vï¿½ oppilas
+     * @throws SailoException jos lisï¿½iystï¿½ ei voida tehdï¿½
      * @example
      * <pre name="test">
      * #THROWS SailoException
@@ -105,7 +105,7 @@ public class Openapu {
      * @param kurssitTied kurssitiedoston nimi
      * @param oppilaatTied oppilastiedoston nimi
      * @param kkTied kurssikohtaisten tietojen tiedoston nimi
-     * @throws SailoException mikäli ei onnistu
+     * @throws SailoException mikï¿½li ei onnistu
      */
     public void lueTiedostosta(String kurssitTied, String oppilaatTied, String kkTied) throws SailoException {
         kurssit.lueTiedostosta(kurssitTied);
@@ -136,9 +136,9 @@ public class Openapu {
     
     /**
      * Etsii tietyt kurssit kurssit-oliosta
-     * @param hakuehto nimi, jota etsitään
+     * @param hakuehto nimi, jota etsitï¿½ï¿½n
      * @return lista kursseista
-     * @throws SailoException jos epäonnistuu
+     * @throws SailoException jos epï¿½onnistuu
      */
     public Collection<Kurssi> etsiKurssit(String hakuehto) throws SailoException {
     	return kurssit.etsi(hakuehto);
@@ -147,7 +147,7 @@ public class Openapu {
     /**
      * Hakee oppilaat listaan.
      * @return lista oppilaista
-     * @throws SailoException jos epäonnistuu
+     * @throws SailoException jos epï¿½onnistuu
      */
     public Collection<Oppilas> etsiOppilaat() throws SailoException {
         return oppilaat.etsi();
@@ -155,9 +155,9 @@ public class Openapu {
     
     
     /**
-     * Palauttaa alkiot taulukosta i:nnen oppilaan. 0 on ensimmäinen.
-     * @param i lisäysjärjestysnumero
-     * @return i:s oppilas lisäysjärjestyksessä
+     * Palauttaa alkiot taulukosta i:nnen oppilaan. 0 on ensimmï¿½inen.
+     * @param i lisï¿½ysjï¿½rjestysnumero
+     * @return i:s oppilas lisï¿½ysjï¿½rjestyksessï¿½
      */
     public Oppilas annaOppilasNro(int i) {
         return oppilaat.annaAlkio(i);
@@ -180,14 +180,14 @@ public class Openapu {
     		kktiedot.tallenna();
     	} catch (Exception e) { virhe += e.getMessage();}
     	
-    	if (!virhe.equals("")) throw new SailoException("Tallentaminen epäonnistui: " + virhe);
+    	if (!virhe.equals("")) throw new SailoException("Tallentaminen epï¿½onnistui: " + virhe);
     }
     
     
     /**
      * Tutkii, onko kurssilla oppilas vai ei.
-     * @param kurssi kurssi, jolta etsitään
-     * @param oppilas oppilas, jota etsitään
+     * @param kurssi kurssi, jolta etsitï¿½ï¿½n
+     * @param oppilas oppilas, jota etsitï¿½ï¿½n
      * @return onko kurssilla oppilas vai ei
      */
     public boolean onkoKurssilla(Kurssi kurssi, Oppilas oppilas) {
@@ -196,13 +196,13 @@ public class Openapu {
     
     
     /**
-     * Lisää oppilaan kurssille luomalla uuden kurssikohtainen-olion. Ei lisää, mikäli oppilas on jo kurssilla.
-     * @param oppilas oppilas joka lisätään
-     * @param kurssi kurssi jolle oppilas lisätään
-     * @throws SailoException mikäli lisääminen ei onnistu
+     * Lisï¿½ï¿½ oppilaan kurssille luomalla uuden kurssikohtainen-olion. Ei lisï¿½ï¿½, mikï¿½li oppilas on jo kurssilla.
+     * @param oppilas oppilas joka lisï¿½tï¿½ï¿½n
+     * @param kurssi kurssi jolle oppilas lisï¿½tï¿½ï¿½n
+     * @throws SailoException mikï¿½li lisï¿½ï¿½minen ei onnistu
      */
     public void liitaKurssille(Kurssi kurssi, Oppilas oppilas) throws SailoException {
-    	if (onkoKurssilla(kurssi,oppilas)) return;
+    	if (oppilas == null || onkoKurssilla(kurssi,oppilas)) return;
         KurssikohtTieto kktieto = new KurssikohtTieto(kurssi.getID(), oppilas.getID());
         kktiedot.lisaa(kktieto);
     }
@@ -214,12 +214,12 @@ public class Openapu {
      * @param oppilas joka poistetaan
      */
     public void poistaKurssilta(Kurssi kurssi, Oppilas oppilas) {
-        kktiedot.poista(kurssi.getID(), oppilas.getID());
+        if (kurssi != null && oppilas != null) kktiedot.poista(kurssi.getID(), oppilas.getID());
     }
     
     
     /**
-     * Poistaa kurssin tietojärjestelmästä
+     * Poistaa kurssin tietojï¿½rjestelmï¿½stï¿½
      * @param kurssi poistettavan kurssin viite.
      */
     public void poista(Kurssi kurssi) {
@@ -230,7 +230,7 @@ public class Openapu {
     /**
      * Palauttaa listana kurssin oppilaiden ID:t.
      * @param kurssiID kurssin ID
-     * @return lista oppilaiden ID:stä
+     * @return lista oppilaiden ID:stï¿½
      */
     public List<Integer> annaOppilasIDTiedot(int kurssiID) {
         return kktiedot.annaOppilasIDTiedot(kurssiID);
@@ -286,7 +286,7 @@ public class Openapu {
     
     /**
      * Muuttaa kurssin tietoja tietorakenteessa.
-     * Etsitään kurssi vastaavalla ID:llä, jos ei löydy niin lisätään uutena.
+     * Etsitï¿½ï¿½n kurssi vastaavalla ID:llï¿½, jos ei lï¿½ydy niin lisï¿½tï¿½ï¿½n uutena.
      * @param kurssi kurssin viite, joka halutaan korvata. Tietorakenne muuttuu omistajaksi
      */
     public void korvaaTaiLisaa(Kurssi kurssi) {
@@ -296,8 +296,8 @@ public class Openapu {
     
     /**
      * Muuttaa oppilaan tietoja tietorakenteessa.
-     * Etsitään kurssi vastaavalla ID:llä, jos ei löydy niin lisätään uutena.
-     * @param oppilas joka korvataan tai lisätään.
+     * Etsitï¿½ï¿½n kurssi vastaavalla ID:llï¿½, jos ei lï¿½ydy niin lisï¿½tï¿½ï¿½n uutena.
+     * @param oppilas joka korvataan tai lisï¿½tï¿½ï¿½n.
      */
     public void korvaaTaiLisaa(Oppilas oppilas) {
         oppilaat.korvaaTaiLisaa(oppilas);
@@ -306,7 +306,7 @@ public class Openapu {
     
     /**
      * Muuttaa kurssikohtaista tietoa tietorakenteessa.
-     * @param kktieto joka korvataan tai lisätään
+     * @param kktieto joka korvataan tai lisï¿½tï¿½ï¿½n
      */
     public void korvaaTaiLisaa(KurssikohtTieto kktieto) {
         kktiedot.korvaaTaiLisaa(kktieto);
@@ -314,7 +314,7 @@ public class Openapu {
     
     
     /**
-     * Hakee tiettyä Kurssi ID:tä ja oppilas ID:tä vastaavan kursskohtaisen tiedon
+     * Hakee tiettyï¿½ Kurssi ID:tï¿½ ja oppilas ID:tï¿½ vastaavan kursskohtaisen tiedon
      * @param KID kurssin id
      * @param OID oppilaan id
      * @return kurssikohtainen tieto
@@ -326,7 +326,7 @@ public class Openapu {
     
     /**
      * Palauttaa tiedon, onko tietorakennetta muutettu.
-     * @return true, mikäli muutettu ja false mikäli ei muutettu
+     * @return true, mikï¿½li muutettu ja false mikï¿½li ei muutettu
      */
     public boolean onkoMuutettu() {
         return oppilaat.onkoMuutettu() || kurssit.onkoMuutettu() || kktiedot.onkoMuutettu();
@@ -334,8 +334,8 @@ public class Openapu {
 
         
     /**
-     * Testipääohjelma
-     * @param args ei käytössä
+     * Testipï¿½ï¿½ohjelma
+     * @param args ei kï¿½ytï¿½ssï¿½
      */
     public static void main(String[] args) {
         Openapu openapu = new Openapu();
