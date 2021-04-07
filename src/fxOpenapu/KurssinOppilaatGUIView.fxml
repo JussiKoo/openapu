@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.ListChooser?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="239.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxOpenapu.KurssinOppilaatGUIController">
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ListChooser fx:id="chooserKaikkioppilaat" rivit="Peura Pekka&#10;Sukka Seppo&#10;Metsäläinen Maarit&#10;" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Label text="Oppilaat tietokannassa" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </left>
+   <right>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ListChooser fx:id="chooserKurssinoppilaat" rivit="Terävä Timo&#10;Ehrmann Mikko&#10;Föhr Liisa" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Label text="Oppilaat kurssilla" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </right>
+   <bottom>
+      <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleLisaaKurssille" text="Lisää kurssille">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlePoistaKurssilta" text="Poista kurssilta">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlePeruuta" text="Peruuta">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleOK" text="OK">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
