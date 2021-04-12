@@ -37,7 +37,7 @@ public class KurssiDialogGUIController implements ModalControllerInterface<Kurss
 	
 	@Override
 	public void initialize(URL url, ResourceBundle bundle) {
-		alusta();
+		alusta(); //alustaa
 	}
 	
 	
